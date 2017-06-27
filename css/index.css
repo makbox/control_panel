@@ -1,0 +1,80 @@
+/*
+ * Copyright (c) 2016-2017 Barchampas Gerasimos <http://makbox.co.nf/>
+ * Makbox is a personal (staas) cloud.
+ *
+ * Makbox is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ *
+ * Makbox is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License, version 3,
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ *
+ */
+
+
+
+
+#body
+{
+background-image:url('/control_panel/photos/database-development.png');
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+
+#table1
+{
+background-color:;
+bordernone;
+color: black;
+padding:;
+margin: auto;
+text-align:center;
+text-decoration: none;
+display: inline-block;
+}
+
+
+
+
+#button
+{
+background-color:white;
+border:solid;
+border-color:white;
+border-width:0.5em;
+opacity:0.5;
+padding: 6px 43px;
+margin:auto;
+color: black;
+text-decoration: none;
+display: inline-block;
+}
+
+
+
+#text
+{
+background-color:white;
+border:solid;
+border-color:;
+border-width:0em;
+color: black;
+opacity:0.6;
+padding: 6px 18px;
+margin:auto;
+text-align:center;
+text-decoration: none;
+display: inline-block;
+}
+
+
+
+

@@ -1,0 +1,168 @@
+/*
+ * Copyright (c) 2016-2017 Barchampas Gerasimos <http://makbox.co.nf/>
+ * Makbox is a personal (staas) cloud.
+ *
+ * Makbox is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ *
+ * Makbox is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License, version 3,
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ *
+ */
+
+
+
+
+
+#body
+{
+background-color:lightblue;
+
+border-width: 40px 70px 40px 70px;
+border-style: double;
+border-color: white;
+border-radius: 120px 40px 60px 120px;
+-moz-border-radius:40px 60px 60px 60px;
+-webkit-border-radius:1200px 1200px 1000px 1000px;
+}
+
+
+
+#table2
+{
+background-color:lightblue;
+border-style:solid;
+border-width:0em; 
+border-color:;
+height:10em;
+width:70%;
+position: absolute;
+left: 15%;
+top:;
+width:;
+text-align: center;
+font-size: 15px;
+}
+
+
+
+
+#header
+{
+position:absolute;
+top:-2.3%;
+left:15%;
+background-color:;
+text-decoration: none;
+color:white;
+font-size:24px;
+width:70%;
+border-style:solid;
+border-width:0.7em;
+border-color:lightblue;
+}
+
+
+
+#a2
+{
+background-color:lightblue;
+background-image:url('/control_panel/photos/database-tree.ico');
+background-repeat:no-repeat;
+background-size:100% 100%;
+left:15%;
+height:30%;
+width:40%;
+border-style:solid;
+border-width:0.4em;
+border-color:lightblue;
+}
+
+
+
+
+#a3
+{
+background-color:lightblue;
+height:4em;
+width:70%;
+position: absolute;
+left: 15%;
+top:;
+width:;
+text-align: center;
+font: bold italic 12px Arial;
+}
+
+
+
+
+
+
+
+
+#del-submit
+{
+border-style:solid;
+border-color:red;
+background-color:red;
+box-shadow:none;
+opacity:0.7;
+color:white;
+}
+
+
+
+#logout
+{
+border-style:solid;
+border-color:red;
+background-color:red;
+box-shadow:none;
+opacity:0.7;
+color:white;
+text-decoration:none;
+}
+
+
+#a
+{
+ font: bold 11px Arial;
+  text-decoration: none;
+  background-color:white;
+  color: #333333;
+  padding: 12px 12px 12px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+
+
+
+#th
+{
+vertical-align: text-top;
+font-size:20px;
+color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
