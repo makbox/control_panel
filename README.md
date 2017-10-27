@@ -7,4 +7,4 @@ Makbox control panel for the cloud manager
 4) for connect to dashboard use: username:makbox and password:makbox </br>
 
 
-![Makbox_inside](control_panel.png) <br> <br>
+![Control_panel](control_panel.png) <br> <br>
