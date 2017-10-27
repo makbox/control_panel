@@ -30,9 +30,16 @@
 <html>
 <head>
 
+
 <meta charset="utf-8">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
  <link rel="stylesheet" type="text/css" href="/control_panel/css/index.css"> 
+
 
 </head>
 
@@ -41,18 +48,54 @@
 
 
 
+ <div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+
+      <img src="/control_panel/photos/makbox.png" class="img-responsive" height="280px;" width="280px;">
+      <div class="row">
+        <h3 class="text-center" style="padding-right: 80px;"> Administrator </h3>
+      </div>
+
+
+      <div class="row">
+           <form action="" method="post">
+          <div class="input-group col-xs-9 col-sm-9 col-md-9">
+
+            <input type="password" placeholder="Password" name="password" class="form-control">
+
+          <div class="input-group-btn">
+            <button class="btn btn-md btn-default btn-block" name="submit">
+               <span class="glyphicon glyphicon-arrow-right"></span>
+           </button>
+          </div>
+
+          </div>
+
+      </div>
+  </div>
+
+
+
+
+
+</body>
+</html>
+
 
 <?php
  
 
-$allow= ip2long("127.0.0.1");
+$allow= ip2long("127.0.0.1"); // for mozilla browser
+
+$allow2 = ip2long("::1"); // for chrome browser
+
 
 $ip = ip2long($_SERVER['REMOTE_ADDR']); // ip tou client
 
 $location = '/error'; // edw stelnw ton spam xrhsth
 
 
-if ($ip!=$allow)
+if ($ip!=$allow & $ip !=$allow2)
  {
 //stelnw se allo url
 header ('HTTP/1.1 301 Moved Permanently');
@@ -68,15 +111,13 @@ else
   if(isset($_POST['submit']))
   {
 
-  $name="makbox";
   $pass="makbox";
 
-  $username=$_POST['username'];
   $password=$_POST['password'];
 
-   if($username==$name && $password==$pass)
+   if($password==$pass)
       {
-         $_SESSION['login']=$username;
+         $_SESSION['login']="makbox";
         header('Location: control_panel.php');
         }
 
@@ -93,38 +134,3 @@ else
 } //kleisimo ths megalhs else gia elenxo ths ip
 
 ?>
-
-
-
-
- <div align="center">
-       <table id="table1">
-        <tr>
-   <form action="" method="post">
-
-
-     <td>
-  <input type="text" name="username" id="text" placeholder="Username" autofocus="autofocus" required>
-     </td>
-
-    <td>
-   <input type="password" name="password" id="text" placeholder="Password" required>
-   </td>
-
-
-    <td>
-<input type="submit" name="submit" id="button" value="Go to control panel" style="visibility: hidden;">
-   </td>
-
-   </tr>
- </form>
-  </table> 
- </div>
-
- <br><br>
-
-
-
-
-</body>
-</html>
