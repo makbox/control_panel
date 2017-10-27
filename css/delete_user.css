@@ -21,10 +21,31 @@
 
 
 
+#insert
+{
+background-color:#404040;
+border-style:solid;
+border-width:0.5em; 
+border-color:#404040;
+height:4em;
+width:100%;
+position: absolute;
+left: 0;
+top: 13%;
+width:;
+text-align: center;
+font-size: 15px;
+}
+
+
+
+
+
+
 #table1
 {
 position:absolute;
-top:12%;
+top:19%;
 left:15%;
 border-style:solid;
 border-width:5em; 
@@ -41,13 +62,11 @@ font-size: 15px;
 
 
 
-
-
 #header
 {
 position:absolute;
 top:0%;
-left:15%;
+left:14%;
 background-color:#404040;
 text-decoration: none;
 color:white;
@@ -60,7 +79,7 @@ height:8%;
 #a1
 {
 position:absolute;
-top:6.5%;
+top:8%;
 left:43%;
 text-decoration: none;
 background-color:#404040;
@@ -108,21 +127,3 @@ border-left: 1px solid black;
 border-bottom: 1px solid black;
 border-left: 1px solid black;
 }
-
-
-
-
-
-
-
-#del-submit
-{
-border-style:solid;
-border-color:red;
-background-color:red;
-box-shadow:none;
-opacity:0.7;
-color:white;
-}
-
-
