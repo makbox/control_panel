@@ -108,7 +108,7 @@ function toggle(source) {
 
   <div align="center">
  <div id="header">
-   <h3> All data for users transfer </h3>
+   <h3> Hidden data of users </h3>
    </div>
 
 
@@ -161,12 +161,12 @@ function toggle(source) {
 
 
 
-         $sql="select id,name,type,size,_from,_to,created from folder_uploads 
+         $sql="select id,name,type,size,_from,_to,created from backup_folder_uploads 
                where file_type = 'canonical' ";
          $result=$conn->query($sql);
        
         echo "<table id=table1>
-           <form action='transfer_archives_delete.php' method='post' onSubmit='return delete_confirm();'/> 
+           <form action='transfer_archives_hidden_delete.php' method='post' onSubmit='return delete_confirm();'/> 
                   <tr> 
                   <td id=hr1> Name </td>
                   <td id=hr1> Type </td> 
@@ -191,7 +191,7 @@ function toggle(source) {
                    <td id=hr2> {$row['_from']} </td>
                    <td id=hr2> {$row['_to']} </td>
                    <td id=hr2> {$row['created']} </td>
-                   <td id=hr2><a href='transfer_archives_download.php?id={$row['id']}' id=a3>  Download </a>  </td> 
+                   <td id=hr2><a href='transfer_archives_hidden_download.php?id={$row['id']}' id=a3>  Download </a>  </td> 
                   <td id=hr2> <input type='checkbox'  name='checked_id[]' value='{$row['id']}' </td>
                     </tr>";
                           
@@ -206,9 +206,9 @@ function toggle(source) {
                    <tr>
                <td> <a href='#top' id='a2'> Back to Top </a> </td> 
                  <td>  </td> <td> </td>
-              <td><a href='transfer_archives_hidden.php' id=a2> Hidden files </a>  </td>
+              <td><a href='transfer_archives.php' id=a2> Public files </a>  </td>
                 <td> </td> <td> </td>
-               <td><a href='transfer_archives_export.php' id=a2> Export as pdf </a>  </td>
+               <td><a href='transfer_archives_hidden_export.php' id=a2> Export as pdf </a>  </td>
                   </tr>";     
             echo "</table>";
 	

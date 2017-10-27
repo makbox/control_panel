@@ -22,7 +22,6 @@
  */
 
 
-
  session_start();
 
 ?>
@@ -35,7 +34,7 @@
 
 <meta charset="utf-8">
 
- <link rel="stylesheet" type="text/css" href="/control_panel/css/transfer_archives.css"> 
+ <link rel="stylesheet" type="text/css" href="/control_panel/css/delete_user.css"> 
 
 
 
@@ -108,8 +107,19 @@ function toggle(source) {
 
   <div align="center">
  <div id="header">
-   <h3> All data for users transfer </h3>
+   <h3> Delete user <font color="red"> (warning) </font> </h3>
    </div>
+
+
+<table border=1 id=insert>
+ <form action="delete_user_delete.php" method="post">
+    <th>Insert user for delete  </th>
+    <th>User:<input type="text" name="delete_user" required></th>
+    <th><input type="submit" name="submit_delete_user" value="Delete user"></th>
+ </form>
+  </table>               
+
+
 
 
   <div align="center">
@@ -134,8 +144,7 @@ function toggle(source) {
      else
        {
       
-
-       require('class_cn.php');
+      require('class_cn.php');
 
       $obj = new in;
  
@@ -143,7 +152,10 @@ function toggle(source) {
      $user = $obj->connect[1];
      $pass = $obj->connect[2];
      $db   = $obj->connect[3];
+
      
+
+
        $conn= new mysqli($host,$user,$pass,$db);
        
       
@@ -161,38 +173,31 @@ function toggle(source) {
 
 
 
-         $sql="select id,name,type,size,_from,_to,created from folder_uploads 
-               where file_type = 'canonical' ";
+         $sql="select id,username,email from login";
          $result=$conn->query($sql);
+
        
+
         echo "<table id=table1>
-           <form action='transfer_archives_delete.php' method='post' onSubmit='return delete_confirm();'/> 
+           <form action='delete_user_delete.php' method='post' onSubmit='return delete_confirm();'/> 
                   <tr> 
-                  <td id=hr1> Name </td>
-                  <td id=hr1> Type </td> 
-                  <td id=hr1> Size </td>
-                  <td id=hr1> From </td>
-                  <td id=hr1> To </td>
-                  <td id=hr1> Created </td>
-                  <td id=hr1> Download </td>
-                  <td id=hr1>  
-                  All<input type='checkbox'  onclick='toggle(this);'> 
-                  <input type='submit'  id='del-submit' name='delete_submit' value='Delete'/>           
-                </td>
+                  <td id=hr1> User </td>
+                  <td id=hr1> Email </td>
+                  <td id=hr1> Cloud folder </td>
                     </tr>";
 
          while($row=$result->fetch_assoc())
             {
 
+             $_SESSION['user'] = $username;
+
+             $folder_name = "(".$row['username'].")";
+
+
              echo "<tr>
-                   <td id=hr2> {$row['name']} </td>
-                   <td id=hr2> {$row['type']} </td>
-                   <td id=hr2> {$row['size']} </td>
-                   <td id=hr2> {$row['_from']} </td>
-                   <td id=hr2> {$row['_to']} </td>
-                   <td id=hr2> {$row['created']} </td>
-                   <td id=hr2><a href='transfer_archives_download.php?id={$row['id']}' id=a3>  Download </a>  </td> 
-                  <td id=hr2> <input type='checkbox'  name='checked_id[]' value='{$row['id']}' </td>
+                   <td id=hr2> {$row['username']} </td>
+                   <td id=hr2> {$row['email']} </td>
+                   <td id=hr2> $folder_name </td>
                     </tr>";
                           
                   }
@@ -200,20 +205,16 @@ function toggle(source) {
 
         echo " 
                  <tr>
-               <td> <hr> </td> <td> <hr> </td> <td> <hr> </td> <td> <hr> </td> <td> <hr> </td> <td> <hr> </td> <td> <hr> </td> 
+               <td> <hr> </td> <td> <hr> </td> <td> <hr> </td> 
                   </tr>
-
                    <tr>
+                  <td> </td>  
                <td> <a href='#top' id='a2'> Back to Top </a> </td> 
-                 <td>  </td> <td> </td>
-              <td><a href='transfer_archives_hidden.php' id=a2> Hidden files </a>  </td>
-                <td> </td> <td> </td>
-               <td><a href='transfer_archives_export.php' id=a2> Export as pdf </a>  </td>
+                 
                   </tr>";     
             echo "</table>";
 	
        
-
          
           }// kleisimo ths else gia ta dedomena
 

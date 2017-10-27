@@ -65,7 +65,7 @@ $pdf->Cell(40,15,"Send",1,0,'C',TRUE);
 $pdf->Ln();
 
 
-        $sql="select id,name,type,size,_from,_to,created from backup_folder_uploads";
+        $sql="select id,name,type,size,_from,_to,created from folder_uploads";
         $result = $conn->query($sql);
 
         while($row=$result->fetch_assoc())

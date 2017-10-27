@@ -115,8 +115,8 @@ if (!isset($_SESSION['login']))
  
           <tr>
             <td id="th"> Settings <br><img src="/control_panel/photos/settings.png" height="80" width="80"> </td>
-            <td> <a href="" id="a"> Add new user <a/> </td>
-            <td> <a href="" id="a"> Delete user <a/> </td>
+            <td> <a href="delete_user.php" id="a"> Delete user <a/> </td>
+            <td> <a href="storage_user.php" id="a"> Storage user <a/> </td>
             <td> <a href="" id="a"> Choose password  <a/> </td>
             <td> <a href="logout.php" id="a"> Sign out  <a/> </td>
            </tr>

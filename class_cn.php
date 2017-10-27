@@ -27,10 +27,10 @@ class in
 public $connect = array();
 public function __construct()
 {
-$this->connect[0]="";
-$this->connect[1]="";
-$this->connect[2]="";
-$this->connect[3]="";
+$this->connect[0]="localhost";
+$this->connect[1]="makbox";
+$this->connect[2]="makbox";
+$this->connect[3]="makbox";
 }
 }
 ?>

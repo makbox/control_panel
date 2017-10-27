@@ -48,13 +48,13 @@ if($conn->connect_error)
     foreach($idarr as $id)
      {
 
-        $sql1="DELETE FROM folder_uploads WHERE id='$id' and file_type='canonical'";
+        $sql1="DELETE FROM backup_folder_uploads WHERE id='$id'";
         $result1=$conn->query($sql1);
 
 
          }
     $_SESSION['success_msg'] = 'File have been deleted successfully.';
-    header("Location: transfer_archives.php");
+    header("Location: transfer_archives_hidden.php");
 
      }//telos ths else gia ta dedomena
 

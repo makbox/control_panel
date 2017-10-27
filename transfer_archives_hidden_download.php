@@ -57,7 +57,7 @@ $conn = new mysqli($host,$user,$pass,$db);
  else
    {
 
-        $sql= " SELECT name,type,size,data FROM folder_uploads WHERE id ='$id'";
+        $sql= " SELECT name,type,size,data FROM backup_folder_uploads WHERE id ='$id'";
         $result = $conn->query($sql);
  
         if($result) 
